@@ -201,3 +201,9 @@ variable "object_id_to_grant_access" {
   description = "Object ID of the Azure AD user, group, or service principal"
   default = "0a262703-f33c-4cfd-9c32-9a2dcbb5ceb2"
 }
+
+variable "vm_password" {
+  description = "Password for the Windows VM"
+  type        = string
+  default     = "Password12345!"  # You can set a default value or provide it when running Terraform.
+}
