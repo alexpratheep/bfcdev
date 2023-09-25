@@ -18,7 +18,7 @@ resource "azurerm_windows_virtual_machine" "srv_vm" {
   resource_group_name = var.BFC_DEV_SERVICE-NAME
   network_interface_ids = [azurerm_network_interface.srv_nic[count.index].id]
 admin_username        ="adminuser"
-admin_password = "Password12345!" 
+admin_password = var.vm_password 
   size           = "Standard_DS2_v2"
  # delete_os_disk_on_termination = true
 
